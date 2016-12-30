@@ -1,3 +1,5 @@
+![image](https://cloud.githubusercontent.com/assets/22159102/21554484/9d542f5a-cdc4-11e6-8c4c-7730a9e9e2d1.png)
+
 # prerendercloud-nginx
 nginx middleware for prerendering javascript-rendered pages with https://www.prerender.cloud for isomorphic/universal server side rendering
 
@@ -19,11 +21,11 @@ docker run -p8080:80 -v $(pwd)/build:/usr/share/nginx/html:ro -v $(pwd)/default.
 ```
 
 ## Avoid rate limiting by setting your prerendercloud secret/token
-Uncomment the `set $prerendercloud_token` line and replace `YOUR_SECRET_API_TOKEN_HERE` with your actual token you got after signing up at https://www.prerender.cloud/:
+1. Uncomment the `set $prerendercloud_token` line
+2. replace `YOUR_SECRET_API_TOKEN_HERE` with your actual token you got after signing up at https://www.prerender.cloud/
+3. Uncomment the `proxy_set_header X-Prerender-Token` line
 
-```
-set $prerendercloud_token YOUR_SECRET_API_TOKEN_HERE;
-```
+![image](https://cloud.githubusercontent.com/assets/16573/21571692/842d9562-ce86-11e6-94da-422b4229dad4.png)
 
 ## How errors from the server (service.prerender.cloud) are handled
 
