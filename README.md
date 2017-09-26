@@ -21,11 +21,10 @@ docker run -p8080:80 -v $(pwd)/build:/usr/share/nginx/html:ro -v $(pwd)/default.
 ```
 
 ## Avoid rate limiting by setting your prerendercloud secret/token
-1. Uncomment the `set $prerendercloud_token` line
+1. Uncomment the `proxy_set_header X-Prerender-Token` line
 2. replace `YOUR_SECRET_API_TOKEN_HERE` with your actual token you got after signing up at https://www.prerender.cloud/
-3. Uncomment the `proxy_set_header X-Prerender-Token` line
 
-![image](https://cloud.githubusercontent.com/assets/16573/21571692/842d9562-ce86-11e6-94da-422b4229dad4.png)
+![image](https://user-images.githubusercontent.com/22159102/30871247-04adf0ea-a29b-11e7-843f-c8d3d6639d40.png)
 
 ## How errors from the server (service.prerender.cloud) are handled
 
