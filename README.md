@@ -26,6 +26,11 @@ docker run -p8080:80 -v $(pwd)/build:/usr/share/nginx/html:ro -v $(pwd)/default.
 
 ![image](https://user-images.githubusercontent.com/22159102/30871247-04adf0ea-a29b-11e7-843f-c8d3d6639d40.png)
 
+## Troubleshooting
+
+![image](https://user-images.githubusercontent.com/16573/34540302-df9b30b0-f088-11e7-91ee-3c374dd9be7a.png)
+
+
 ## How errors from the server (service.prerender.cloud) are handled
 
 * when prerender.cloud service returns
